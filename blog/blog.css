@@ -1,0 +1,127 @@
+main .background {
+  background-image: url('./blog-imgs/background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* Blog content */
+
+main .blog-content * {
+  z-index: 2;
+}
+
+main .blog-content .blog-content_title {
+  height: 100vh;
+  font-size: 30px;
+  color: white;
+}
+
+/* cards */
+
+main .cards-parent {
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+main .cards-parent .card {
+  width: 100%;
+  opacity: 0.9;
+  background-color: white;
+  transition: 0.5s;
+}
+
+main .blog-content .cards-parent .first-card_img {
+  background-image: url("./blog-imgs/women-img_1.jpg");
+}
+
+main .blog-content .cards-parent .second-card_img {
+  background-image: url("./blog-imgs/construction-img_2.jpg");
+}
+
+main .blog-content .cards-parent .img {
+  background-size: cover;
+  background-position: 35%;
+  width: 100%;
+}
+
+main .blog-content .cards-parent .card-info {
+  gap: 20px;
+  padding: 20px;
+}
+
+main .blog-content .cards-parent .card-info hr {
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+main .blog-content .cards-parent .card-info .avatar-sector .avatar-img i {
+  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 16px !important;
+  text-align: center;
+  align-content: center;
+  color: rgb(200, 200, 200);
+  background-color: rgb(80, 80, 80);
+  border-radius: 50%;
+}
+
+main .blog-content .cards-parent .card-info .avatar-sector p {
+  font-size: 11px;
+}
+
+main .blog-content .cards-parent .card-info .great-info p {
+  font-size: 13px;
+  height: 300px;
+}
+
+main .blog-content .card-info_footer .card-footer-left {
+  gap: 10px;
+}
+
+main .blog-content .card-info_footer .card-footer-left > div {
+  font-size: 12px;
+}
+
+main .card-footer-right {
+  justify-content: flex-end;
+  color: red;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 100px;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 500px) {
+  main .blog-content .blog-content_title h1 {
+    font-size: 25px;
+  }
+
+  main .blog-content .cards-parent .card {
+    flex-direction: column;
+  }
+
+  main .blog-content .cards-parent .img {
+    height: 300px !important;
+    flex: unset;
+  }
+
+  main .blog-content .cards-parent .card-info .great-info p {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  main .blog-content .cards-parent {
+    width: 100%;;
+  }
+}

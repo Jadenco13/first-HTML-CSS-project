@@ -1,0 +1,63 @@
+main .first-section {
+  background-image: url("./imgs/about.img.jpg");
+  height: 90vh;
+}
+
+main .about-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .about-section .about-title {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+main .about-section .about-title h3 {
+  padding-inline: 20px;
+  font-size: 35px;
+
+}
+
+main .about-section .about-title > div {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+main .about-section .about-texts > div {
+  width: 45%;
+  margin: 0 auto;
+  opacity: 0.7;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+main .about-section .about-texts {
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width:560px) {
+  main .about-section .about-title {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px; 
+  }
+
+  main .about-section .about-title h3 {
+    font-size: 25px !important;
+  }
+
+  main .about-section .about-title > div {
+    margin: 0;
+  }
+
+  main .about-section .about-texts {
+    flex-direction: column;
+  }
+
+  main .about-section .about-texts > div {
+    width: 100%;
+  }
+
+}

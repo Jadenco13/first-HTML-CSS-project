@@ -1,0 +1,140 @@
+main .first-section {
+  background-image: url("./extras-main-img.jpg");
+  background-size: cover;
+  height: 90vh;
+}
+
+main .extras-section {
+  padding-top: 20px;
+  position: relative;
+}
+
+main .extras-section .extras-filter {
+  font-size: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+main .extras-section .extras-filter .sticky-filter {
+  position: sticky;
+  top: 180px;
+  /* background-color: black; */
+
+}
+
+main .extras-section .extras-filter h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+main .extras-section .extras-filter > div > div {
+  padding: 10px 0;
+  cursor: pointer;
+  align-items: center;
+  font-size: 15px;
+}
+
+main .extras-section .extras-cards {
+  flex: 4;
+  gap: 20px;
+}
+
+main .extras-section .extras-cards > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+
+main .extras-section .extras-cards > div > img {
+  width: 300px;
+  height: 300px;
+}
+
+main .extras-section .extras-cards .card-1::before {
+  background-image: url("./extras-card-imgs/img-1-hover.webp");
+}
+
+main .extras-section .extras-cards .card-2::before {
+  background-image: url("./extras-card-imgs/img-2-hover.webp");
+}
+
+main .extras-section .extras-cards .card-3::before {
+  background-image: url("./extras-card-imgs/img-3-hover.webp");
+}
+
+main .extras-section .extras-cards .card-4::before {
+  background-image: url("./extras-card-imgs/img-4-hover.webp");
+}
+
+main .extras-section .extras-cards .card-6::before {
+  background-image: url("./extras-card-imgs/img-6-hover.webp");
+}
+
+main .extras-section .extras-cards > div::before {
+  content: "";
+  opacity: 0;
+  height: 70%;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-size: cover;
+}
+
+main .extras-section .extras-cards > div:hover::before {
+  opacity: 1;
+}
+
+main .extras-section .extras-cards > div::after {
+  content: "Quick Wiev";
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100%;
+  background-color: whitesmoke;
+  line-height: 30px;
+}
+
+main .extras-section .extras-cards > div:hover::after {
+  transform: translateY(-300%);
+  opacity: 1;
+}
+
+main .extras-section .extras-cards button {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 90%;
+  transition: 0.4s;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 815px) {
+  main .extras-section .extras-filter {
+    flex: 2;
+  }
+  main .extras-section .extras-cards {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main .extras-section {
+    flex-direction: column;
+  }
+
+  main .extras-section .extras-cards {
+    justify-content: center;
+  }
+}
