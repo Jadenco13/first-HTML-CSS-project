@@ -1,0 +1,168 @@
+/* MAIN */
+
+main .first-section {
+  background-image: url("./tea-list-main-img.jpg");
+  height: 90vh;
+}
+
+/* Tea section */
+
+main .tea-section {
+  padding-top: 30px;
+}
+
+main .tea-section .main-filter {
+  padding: 20px;
+}
+
+main .tea-section .main-filter .sticky-filter {
+  position: sticky;
+  top: 170px;
+}
+
+main .tea-section .main-filter h3 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+main .tea-section .main-filter li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+main .tea-section .tea-cards {
+  flex: 4;
+  justify-content: space-around;
+  column-gap: 10px;
+  row-gap: 25px;
+}
+
+main .tea-section .tea-cards > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+main .tea-section .tea-cards .edition {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  font-size: small;
+  padding: 2px 5px;
+  background-color: var(--main-color);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main .tea-section .tea-cards > div > img {
+  width: 300px;
+  height: 300px;
+}
+
+main .tea-section .tea-cards .card-1::before {
+  background-image: url("./tea-list-remaining/img-1-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-2::before {
+  background-image: url("./tea-list-remaining/img-2-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-3::before {
+  background-image: url("./tea-list-remaining/img-3-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-4::before {
+  background-image: url("./tea-list-remaining/img-4-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-5::before {
+  background-image: url("./tea-list-remaining/img-5-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-6::before {
+  background-image: url("./tea-list-remaining/img-6-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-7::before {
+  background-image: url("./tea-list-remaining/img-7-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-8::before {
+  background-image: url("./tea-list-remaining/img-8-hover.jpg");
+}
+
+main .tea-section .tea-cards .card-9::before {
+  background-image: url("./tea-list-remaining/img-9-hover.jpg");
+}
+
+main .tea-section .tea-cards > div::before {
+  content: "";
+  opacity: 0;
+  height: 70%;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-position: center;
+  background-size: contain;
+}
+
+main .tea-section .tea-cards > div:hover::before {
+  opacity: 1;
+}
+
+main .tea-section .tea-cards > div::after {
+  content: "Quick Wiev";
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100%;
+  background-color: whitesmoke;
+  line-height: 30px;
+}
+
+main .tea-section .tea-cards > div:hover::after {
+  transform: translateY(-180%);
+  opacity: 1;
+}
+
+main .tea-section .tea-cards > div > button {
+  width: 90%;
+  height: 40px;
+  border: none;
+  background-color: #242a35;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+main .tea-section .tea-cards > div > button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 803px) {
+  main .tea-section .main-filter {
+    flex: 3;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  main .tea-section {
+    flex-direction: column;
+  }
+}
